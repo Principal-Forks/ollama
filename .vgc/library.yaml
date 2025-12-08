@@ -1,0 +1,76 @@
+version: "1.0.0"
+name: "Ollama Architecture Components"
+
+nodeComponents:
+  cli:
+    name: "CLI"
+    description: "Command-line interface entry point"
+    icon: "Terminal"
+    color: 1
+    
+  api_client:
+    name: "API Client"
+    description: "Client-side API for interacting with Ollama service"
+    icon: "Globe"
+    color: 2
+    
+  server:
+    name: "HTTP Server"
+    description: "Main HTTP server handling REST API requests"
+    icon: "Server"
+    color: 3
+    
+  scheduler:
+    name: "Model Scheduler"
+    description: "Manages model loading and GPU allocation"
+    icon: "Cpu"
+    color: 4
+    
+  llm_runner:
+    name: "LLM Runner"
+    description: "Individual model execution processes"
+    icon: "Zap"
+    color: 5
+    
+  model_cache:
+    name: "Model Cache"
+    description: "Local model storage and blob cache"
+    icon: "Database"
+    color: 6
+    
+  gpu_manager:
+    name: "GPU Manager"
+    description: "GPU detection and memory management"
+    icon: "Monitor"
+    color: 1
+    
+  auth:
+    name: "Authentication"
+    description: "User authentication and authorization"
+    icon: "Shield"
+    color: 2
+
+edgeComponents:
+  http_request:
+    name: "HTTP Request"
+    description: "HTTP API calls"
+    style: "solid"
+    color: 3
+    
+  model_load:
+    name: "Model Load"
+    description: "Model loading and initialization"
+    style: "dashed"
+    color: 4
+    
+  gpu_allocation:
+    name: "GPU Allocation"
+    description: "GPU memory and layer assignment"
+    style: "dotted"
+    color: 5
+    
+  auth_flow:
+    name: "Authentication"
+    description: "Authentication and authorization flow"
+    style: "solid"
+    color: 6

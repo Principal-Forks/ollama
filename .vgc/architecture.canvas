@@ -1,0 +1,162 @@
+{
+  "vv": {
+    "name": "Ollama Architecture",
+    "version": "1.0.0"
+  },
+  "nodes": [
+    {
+      "id": "cli",
+      "type": "text",
+      "x": 100,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "text": "CLI",
+      "icon": "Terminal",
+      "color": 1
+    },
+    {
+      "id": "api_client",
+      "type": "text",
+      "x": 300,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "text": "API Client",
+      "icon": "Globe",
+      "color": 2
+    },
+    {
+      "id": "server",
+      "type": "text",
+      "x": 500,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "text": "HTTP Server",
+      "icon": "Server",
+      "color": 3
+    },
+    {
+      "id": "auth",
+      "type": "text",
+      "x": 500,
+      "y": 150,
+      "width": 120,
+      "height": 60,
+      "text": "Authentication",
+      "icon": "Shield",
+      "color": 2
+    },
+    {
+      "id": "scheduler",
+      "type": "text",
+      "x": 700,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "text": "Model Scheduler",
+      "icon": "Cpu",
+      "color": 4
+    },
+    {
+      "id": "gpu_manager",
+      "type": "text",
+      "x": 700,
+      "y": 150,
+      "width": 120,
+      "height": 60,
+      "text": "GPU Manager",
+      "icon": "Monitor",
+      "color": 1
+    },
+    {
+      "id": "llm_runner",
+      "type": "text",
+      "x": 900,
+      "y": 300,
+      "width": 120,
+      "height": 60,
+      "text": "LLM Runner",
+      "icon": "Zap",
+      "color": 5
+    },
+    {
+      "id": "model_cache",
+      "type": "text",
+      "x": 700,
+      "y": 450,
+      "width": 120,
+      "height": 60,
+      "text": "Model Cache",
+      "icon": "Database",
+      "color": 6
+    }
+  ],
+  "edges": [
+    {
+      "id": "cli_to_api",
+      "fromNode": "cli",
+      "toNode": "api_client",
+      "style": "solid",
+      "color": 3,
+      "label": "CLI commands"
+    },
+    {
+      "id": "api_to_server",
+      "fromNode": "api_client",
+      "toNode": "server", 
+      "style": "solid",
+      "color": 3,
+      "label": "REST API"
+    },
+    {
+      "id": "server_auth",
+      "fromNode": "server",
+      "toNode": "auth",
+      "style": "solid",
+      "color": 6,
+      "label": "authenticate"
+    },
+    {
+      "id": "server_to_scheduler",
+      "fromNode": "server",
+      "toNode": "scheduler",
+      "style": "dashed",
+      "color": 4,
+      "label": "model request"
+    },
+    {
+      "id": "scheduler_gpu",
+      "fromNode": "scheduler",
+      "toNode": "gpu_manager",
+      "style": "dotted",
+      "color": 5,
+      "label": "GPU info"
+    },
+    {
+      "id": "scheduler_cache",
+      "fromNode": "scheduler",
+      "toNode": "model_cache",
+      "style": "dashed",
+      "color": 4,
+      "label": "load model"
+    },
+    {
+      "id": "scheduler_runner",
+      "fromNode": "scheduler",
+      "toNode": "llm_runner",
+      "style": "dashed",
+      "color": 4,
+      "label": "spawn process"
+    },
+    {
+      "id": "runner_gpu",
+      "fromNode": "llm_runner",
+      "toNode": "gpu_manager",
+      "style": "dotted",
+      "color": 5,
+      "label": "allocate layers"
+    }
+  ]
+}
