@@ -1,76 +1,133 @@
 version: "1.0.0"
-name: "Ollama Architecture Components"
+name: "Ollama Architecture Library"
 
 nodeComponents:
+  # Entry Points
   cli:
-    name: "CLI"
-    description: "Command-line interface entry point"
+    type: application
+    description: "Command-line interface using Cobra framework"
     icon: "Terminal"
-    color: 1
+    color: 4
     
-  api_client:
-    name: "API Client"
-    description: "Client-side API for interacting with Ollama service"
-    icon: "Globe"
-    color: 2
-    
-  server:
-    name: "HTTP Server"
-    description: "Main HTTP server handling REST API requests"
+  main:
+    type: application
+    description: "Main application entry point"
+    icon: "Play"
+    color: 4
+
+  # Server Layer
+  api_server:
+    type: service
+    description: "HTTP API server using Gin framework"
     icon: "Server"
-    color: 3
+    color: 1
     
   scheduler:
-    name: "Model Scheduler"
-    description: "Manages model loading and GPU allocation"
-    icon: "Cpu"
-    color: 4
-    
-  llm_runner:
-    name: "LLM Runner"
-    description: "Individual model execution processes"
-    icon: "Zap"
-    color: 5
-    
-  model_cache:
-    name: "Model Cache"
-    description: "Local model storage and blob cache"
-    icon: "Database"
-    color: 6
-    
-  gpu_manager:
-    name: "GPU Manager"
-    description: "GPU detection and memory management"
-    icon: "Monitor"
-    color: 1
-    
-  auth:
-    name: "Authentication"
-    description: "User authentication and authorization"
-    icon: "Shield"
+    type: service
+    description: "Manages model loading and resource allocation"
+    icon: "Calendar"
     color: 2
-
-edgeComponents:
-  http_request:
-    name: "HTTP Request"
-    description: "HTTP API calls"
-    style: "solid"
+    
+  model_manager:
+    type: service
+    description: "Handles model manifests and blob storage"
+    icon: "Database"
     color: 3
     
-  model_load:
-    name: "Model Load"
-    description: "Model loading and initialization"
-    style: "dashed"
-    color: 4
+  auth_service:
+    type: service
+    description: "Authentication for cloud models"
+    icon: "Shield"
+    color: 6
+
+  # LLM Layer
+  llm_server:
+    type: service
+    description: "Manages LLM server processes"
+    icon: "Cpu"
+    color: 1
     
-  gpu_allocation:
-    name: "GPU Allocation"
-    description: "GPU memory and layer assignment"
-    style: "dotted"
+  runner:
+    type: service
+    description: "Model execution processes (llama.cpp/ollamarunner)"
+    icon: "Zap"
+    color: 5
+
+  # Model Layer
+  model_layer:
+    type: service
+    description: "Model architecture implementations"
+    icon: "Package"
+    color: 3
+    
+  multimodal:
+    type: service
+    description: "Vision model support and image processing"
+    icon: "Image"
+    color: 4
+
+  # ML Backend
+  ml_backend:
+    type: service
+    description: "Machine learning backend abstraction"
+    icon: "Layers"
+    color: 2
+    
+  ggml:
+    type: service
+    description: "GGML library integration"
+    icon: "Box"
+    color: 1
+    
+  device_manager:
+    type: service
+    description: "GPU/CPU device discovery and management"
+    icon: "Monitor"
+    color: 6
+
+  # Supporting Services
+  template_system:
+    type: service
+    description: "Chat template and prompt formatting"
+    icon: "FileText"
+    color: 3
+    
+  converter:
+    type: service
+    description: "Model format conversion (HuggingFace to GGUF)"
+    icon: "RefreshCw"
     color: 5
     
-  auth_flow:
-    name: "Authentication"
-    description: "Authentication and authorization flow"
-    style: "solid"
+  registry:
+    type: service
+    description: "Model registry integration"
+    icon: "Globe"
+    color: 2
+
+  # Data Stores
+  blob_storage:
+    type: database
+    description: "Local blob cache for model files"
+    icon: "HardDrive"
+    color: 4
+    
+  kv_cache:
+    type: database
+    description: "Key-value cache for efficient inference"
+    icon: "MemoryStick"
+    color: 5
+
+  # External
+  client:
+    type: external
+    description: "External API clients"
+    icon: "Users"
     color: 6
+    
+  huggingface:
+    type: external
+    description: "HuggingFace model repository"
+    icon: "Cloud"
+    color: 1
+
+edgeComponents: {}

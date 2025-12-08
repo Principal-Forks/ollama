@@ -1,162 +1,494 @@
 {
   "vv": {
     "name": "Ollama Architecture",
-    "version": "1.0.0"
+    "version": "1.0.0",
+    "nodeTypes": {
+      "service": {
+        "shape": "rectangle"
+      },
+      "database": {
+        "shape": "cylinder"
+      },
+      "external": {
+        "shape": "ellipse"
+      },
+      "application": {
+        "shape": "rectangle"
+      }
+    }
   },
   "nodes": [
     {
+      "id": "client",
+      "type": "text",
+      "x": 229,
+      "y": 12,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "external",
+        "color": 6
+      },
+      "text": "Client",
+      "component": "client"
+    },
+    {
+      "id": "main",
+      "type": "text",
+      "x": 381,
+      "y": -17,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "application",
+        "color": 4
+      },
+      "text": "Main Entry",
+      "component": "main"
+    },
+    {
       "id": "cli",
       "type": "text",
-      "x": 100,
-      "y": 300,
+      "x": 380,
+      "y": 105,
       "width": 120,
       "height": 60,
+      "vv": {
+        "nodeType": "application",
+        "color": 4
+      },
       "text": "CLI",
-      "icon": "Terminal",
-      "color": 1
+      "component": "cli"
     },
     {
-      "id": "api_client",
+      "id": "api_server",
       "type": "text",
-      "x": 300,
+      "x": 274,
+      "y": 193,
+      "width": 140,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 1
+      },
+      "text": "API Server",
+      "component": "api_server"
+    },
+    {
+      "id": "auth_service",
+      "type": "text",
+      "x": 549,
       "y": 300,
-      "width": 120,
+      "width": 140,
       "height": 60,
-      "text": "API Client",
-      "icon": "Globe",
-      "color": 2
-    },
-    {
-      "id": "server",
-      "type": "text",
-      "x": 500,
-      "y": 300,
-      "width": 120,
-      "height": 60,
-      "text": "HTTP Server",
-      "icon": "Server",
-      "color": 3
-    },
-    {
-      "id": "auth",
-      "type": "text",
-      "x": 500,
-      "y": 150,
-      "width": 120,
-      "height": 60,
-      "text": "Authentication",
-      "icon": "Shield",
-      "color": 2
+      "vv": {
+        "nodeType": "service",
+        "color": 6
+      },
+      "text": "Auth Service",
+      "component": "auth_service"
     },
     {
       "id": "scheduler",
       "type": "text",
-      "x": 700,
-      "y": 300,
-      "width": 120,
+      "x": 127,
+      "y": 294,
+      "width": 140,
       "height": 60,
-      "text": "Model Scheduler",
-      "icon": "Cpu",
-      "color": 4
+      "vv": {
+        "nodeType": "service",
+        "color": 2
+      },
+      "text": "Scheduler",
+      "component": "scheduler"
     },
     {
-      "id": "gpu_manager",
+      "id": "model_manager",
       "type": "text",
-      "x": 700,
-      "y": 150,
-      "width": 120,
+      "x": 323,
+      "y": 399,
+      "width": 140,
       "height": 60,
-      "text": "GPU Manager",
-      "icon": "Monitor",
-      "color": 1
+      "vv": {
+        "nodeType": "service",
+        "color": 3
+      },
+      "text": "Model Manager",
+      "component": "model_manager"
     },
     {
-      "id": "llm_runner",
+      "id": "template_system",
       "type": "text",
-      "x": 900,
-      "y": 300,
-      "width": 120,
+      "x": 350,
+      "y": 301,
+      "width": 140,
       "height": 60,
-      "text": "LLM Runner",
-      "icon": "Zap",
-      "color": 5
+      "vv": {
+        "nodeType": "service",
+        "color": 3
+      },
+      "text": "Template System",
+      "component": "template_system"
     },
     {
-      "id": "model_cache",
+      "id": "llm_server",
       "type": "text",
-      "x": 700,
-      "y": 450,
+      "x": 126,
+      "y": 399,
+      "width": 140,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 1
+      },
+      "text": "LLM Server",
+      "component": "llm_server"
+    },
+    {
+      "id": "runner",
+      "type": "text",
+      "x": -73,
+      "y": 475,
+      "width": 140,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 5
+      },
+      "text": "Runner",
+      "component": "runner"
+    },
+    {
+      "id": "model_layer",
+      "type": "text",
+      "x": 86,
+      "y": 576,
       "width": 120,
       "height": 60,
-      "text": "Model Cache",
-      "icon": "Database",
-      "color": 6
+      "vv": {
+        "nodeType": "service",
+        "color": 3
+      },
+      "text": "Model Layer",
+      "component": "model_layer"
+    },
+    {
+      "id": "multimodal",
+      "type": "text",
+      "x": 153,
+      "y": 688,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 4
+      },
+      "text": "Multimodal",
+      "component": "multimodal"
+    },
+    {
+      "id": "ml_backend",
+      "type": "text",
+      "x": -74,
+      "y": 576,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 2
+      },
+      "text": "ML Backend",
+      "component": "ml_backend"
+    },
+    {
+      "id": "ggml",
+      "type": "text",
+      "x": 7,
+      "y": 754,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 1
+      },
+      "text": "GGML",
+      "component": "ggml"
+    },
+    {
+      "id": "device_manager",
+      "type": "text",
+      "x": -177,
+      "y": 752,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 6
+      },
+      "text": "Device Manager",
+      "component": "device_manager"
+    },
+    {
+      "id": "converter",
+      "type": "text",
+      "x": 214,
+      "y": 494,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 5
+      },
+      "text": "Converter",
+      "component": "converter"
+    },
+    {
+      "id": "registry",
+      "type": "text",
+      "x": 376,
+      "y": 495,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "service",
+        "color": 2
+      },
+      "text": "Registry",
+      "component": "registry"
+    },
+    {
+      "id": "huggingface",
+      "type": "text",
+      "x": 336,
+      "y": 687,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "external",
+        "color": 1
+      },
+      "text": "HuggingFace",
+      "component": "huggingface"
+    },
+    {
+      "id": "blob_storage",
+      "type": "text",
+      "x": 553,
+      "y": 496,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "database",
+        "color": 4
+      },
+      "text": "Blob Storage",
+      "component": "blob_storage"
+    },
+    {
+      "id": "kv_cache",
+      "type": "text",
+      "x": -236,
+      "y": 577,
+      "width": 120,
+      "height": 60,
+      "vv": {
+        "nodeType": "database",
+        "color": 5
+      },
+      "text": "KV Cache",
+      "component": "kv_cache"
     }
   ],
   "edges": [
     {
-      "id": "cli_to_api",
+      "id": "e1",
+      "fromNode": "client",
+      "toNode": "api_server",
+      "style": "solid",
+      "label": "HTTP API",
+      "vv": {
+        "color": 6
+      }
+    },
+    {
+      "id": "e2",
+      "fromNode": "main",
+      "toNode": "cli",
+      "style": "solid",
+      "vv": {
+        "color": 4
+      }
+    },
+    {
+      "id": "e3",
       "fromNode": "cli",
-      "toNode": "api_client",
+      "toNode": "api_server",
       "style": "solid",
-      "color": 3,
-      "label": "CLI commands"
+      "label": "serve",
+      "vv": {
+        "color": 4
+      }
     },
     {
-      "id": "api_to_server",
-      "fromNode": "api_client",
-      "toNode": "server", 
-      "style": "solid",
-      "color": 3,
-      "label": "REST API"
+      "id": "e4",
+      "fromNode": "api_server",
+      "toNode": "auth_service",
+      "style": "dashed",
+      "label": "auth",
+      "vv": {
+        "color": 6
+      }
     },
     {
-      "id": "server_auth",
-      "fromNode": "server",
-      "toNode": "auth",
-      "style": "solid",
-      "color": 6,
-      "label": "authenticate"
-    },
-    {
-      "id": "server_to_scheduler",
-      "fromNode": "server",
+      "id": "e5",
+      "fromNode": "api_server",
       "toNode": "scheduler",
-      "style": "dashed",
-      "color": 4,
-      "label": "model request"
+      "style": "solid",
+      "vv": {
+        "color": 1
+      }
     },
     {
-      "id": "scheduler_gpu",
+      "id": "e6",
+      "fromNode": "api_server",
+      "toNode": "template_system",
+      "style": "dashed",
+      "label": "format",
+      "vv": {
+        "color": 3
+      }
+    },
+    {
+      "id": "e7",
       "fromNode": "scheduler",
-      "toNode": "gpu_manager",
+      "toNode": "model_manager",
+      "style": "solid",
+      "vv": {
+        "color": 2
+      }
+    },
+    {
+      "id": "e8",
+      "fromNode": "scheduler",
+      "toNode": "llm_server",
+      "style": "solid",
+      "vv": {
+        "color": 2
+      }
+    },
+    {
+      "id": "e9",
+      "fromNode": "model_manager",
+      "toNode": "blob_storage",
+      "style": "solid",
+      "label": "store/load",
+      "vv": {
+        "color": 3
+      }
+    },
+    {
+      "id": "e10",
+      "fromNode": "model_manager",
+      "toNode": "converter",
+      "style": "dashed",
+      "label": "convert",
+      "vv": {
+        "color": 5
+      }
+    },
+    {
+      "id": "e11",
+      "fromNode": "model_manager",
+      "toNode": "registry",
+      "style": "solid",
+      "label": "pull/push",
+      "vv": {
+        "color": 2
+      }
+    },
+    {
+      "id": "e12",
+      "fromNode": "llm_server",
+      "toNode": "runner",
+      "style": "solid",
+      "vv": {
+        "color": 1
+      }
+    },
+    {
+      "id": "e13",
+      "fromNode": "runner",
+      "toNode": "kv_cache",
+      "style": "solid",
+      "label": "cache",
+      "vv": {
+        "color": 5
+      }
+    },
+    {
+      "id": "e14",
+      "fromNode": "runner",
+      "toNode": "model_layer",
+      "style": "solid",
+      "vv": {
+        "color": 5
+      }
+    },
+    {
+      "id": "e15",
+      "fromNode": "runner",
+      "toNode": "ml_backend",
+      "style": "solid",
+      "vv": {
+        "color": 5
+      }
+    },
+    {
+      "id": "e16",
+      "fromNode": "model_layer",
+      "toNode": "multimodal",
+      "style": "dashed",
+      "vv": {
+        "color": 4
+      }
+    },
+    {
+      "id": "e17",
+      "fromNode": "ml_backend",
+      "toNode": "ggml",
+      "style": "solid",
+      "vv": {
+        "color": 2
+      }
+    },
+    {
+      "id": "e18",
+      "fromNode": "ml_backend",
+      "toNode": "device_manager",
+      "style": "solid",
+      "vv": {
+        "color": 6
+      }
+    },
+    {
+      "id": "e19",
+      "fromNode": "converter",
+      "toNode": "huggingface",
+      "style": "dashed",
+      "label": "download",
+      "vv": {
+        "color": 1
+      }
+    },
+    {
+      "id": "e20",
+      "fromNode": "registry",
+      "toNode": "huggingface",
       "style": "dotted",
-      "color": 5,
-      "label": "GPU info"
-    },
-    {
-      "id": "scheduler_cache",
-      "fromNode": "scheduler",
-      "toNode": "model_cache",
-      "style": "dashed",
-      "color": 4,
-      "label": "load model"
-    },
-    {
-      "id": "scheduler_runner",
-      "fromNode": "scheduler",
-      "toNode": "llm_runner",
-      "style": "dashed",
-      "color": 4,
-      "label": "spawn process"
-    },
-    {
-      "id": "runner_gpu",
-      "fromNode": "llm_runner",
-      "toNode": "gpu_manager",
-      "style": "dotted",
-      "color": 5,
-      "label": "allocate layers"
+      "label": "sync",
+      "vv": {
+        "color": 1
+      }
     }
   ]
 }
