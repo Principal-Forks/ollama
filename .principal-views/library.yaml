@@ -1,0 +1,173 @@
+version: "1.0.0"
+name: "Ollama Architecture Library"
+description: "Component library for Ollama LLM platform architecture"
+
+nodeComponents:
+  # Entry Points
+  client:
+    description: "External API clients and applications"
+    icon: "Users"
+    color: 6
+    shape: "rectangle"
+    
+  main:
+    description: "Main application entry point"
+    icon: "Play"
+    color: 4
+    shape: "rectangle"
+    
+  cli:
+    description: "Command-line interface using Cobra framework"
+    icon: "Terminal"
+    color: 4
+    shape: "rectangle"
+
+  # Server Layer
+  api_server:
+    description: "HTTP API server using Gin framework"
+    icon: "Server"
+    color: 1
+    shape: "rectangle"
+    
+  scheduler:
+    description: "Manages model loading and resource allocation"
+    icon: "Calendar"
+    color: 2
+    shape: "rectangle"
+    
+  model_manager:
+    description: "Handles model manifests and blob storage"
+    icon: "Database"
+    color: 3
+    shape: "rectangle"
+    
+  auth_service:
+    description: "Authentication for cloud models"
+    icon: "Shield"
+    color: 6
+    shape: "rectangle"
+    
+  template_system:
+    description: "Chat template and prompt formatting"
+    icon: "FileText"
+    color: 3
+    shape: "rectangle"
+
+  # LLM Layer
+  llm_server:
+    description: "Manages LLM server processes"
+    icon: "Cpu"
+    color: 1
+    shape: "rectangle"
+    
+  runner:
+    description: "Model execution processes (llama.cpp/ollamarunner)"
+    icon: "Zap"
+    color: 5
+    shape: "rectangle"
+
+  # Model Layer
+  model_layer:
+    description: "Model architecture implementations"
+    icon: "Package"
+    color: 3
+    shape: "rectangle"
+    
+  multimodal:
+    description: "Vision model support and image processing"
+    icon: "Image"
+    color: 4
+    shape: "rectangle"
+
+  # ML Backend
+  ml_backend:
+    description: "Machine learning backend abstraction"
+    icon: "Layers"
+    color: 2
+    shape: "rectangle"
+    
+  ggml:
+    description: "GGML library integration"
+    icon: "Box"
+    color: 1
+    shape: "rectangle"
+    
+  device_manager:
+    description: "GPU/CPU device discovery and management"
+    icon: "Monitor"
+    color: 6
+    shape: "rectangle"
+
+  # Supporting Services
+  converter:
+    description: "Model format conversion (HuggingFace to GGUF)"
+    icon: "RefreshCw"
+    color: 5
+    shape: "rectangle"
+    
+  registry:
+    description: "Model registry integration"
+    icon: "Globe"
+    color: 2
+    shape: "rectangle"
+
+  # Data Stores
+  blob_storage:
+    description: "Local blob cache for model files"
+    icon: "HardDrive"
+    color: 4
+    shape: "rectangle"
+    
+  kv_cache:
+    description: "Key-value cache for efficient inference"
+    icon: "MemoryStick"
+    color: 5
+    shape: "rectangle"
+
+  # External
+  huggingface:
+    description: "HuggingFace model repository"
+    icon: "Cloud"
+    color: 1
+    shape: "ellipse"
+
+edgeComponents:
+  http_api:
+    description: "HTTP API communication"
+    style: "solid"
+    
+  serve:
+    description: "Start server instance"
+    style: "solid"
+    
+  auth:
+    description: "Authentication request"
+    style: "dashed"
+    
+  format:
+    description: "Template formatting request"
+    style: "dashed"
+    
+  store_load:
+    description: "Storage operations"
+    style: "solid"
+    
+  convert:
+    description: "Model format conversion"
+    style: "dashed"
+    
+  pull_push:
+    description: "Registry operations"
+    style: "solid"
+    
+  cache:
+    description: "Cache operations"
+    style: "solid"
+    
+  download:
+    description: "Download models from external source"
+    style: "dashed"
+    
+  sync:
+    description: "Synchronization with external registry"
+    style: "dotted"
