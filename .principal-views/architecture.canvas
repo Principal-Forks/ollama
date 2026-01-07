@@ -8,8 +8,8 @@
     {
       "id": "client",
       "type": "text",
-      "x": 229,
-      "y": 12,
+      "x": 101,
+      "y": -121,
       "width": 120,
       "height": 60,
       "text": "**Client**\nExternal API clients",
@@ -23,8 +23,8 @@
     {
       "id": "main",
       "type": "text",
-      "x": 381,
-      "y": -17,
+      "x": 261,
+      "y": -158,
       "width": 120,
       "height": 60,
       "text": "**Main**\nApplication entry point",
@@ -38,8 +38,8 @@
     {
       "id": "cli",
       "type": "text",
-      "x": 380,
-      "y": 105,
+      "x": 261,
+      "y": -55,
       "width": 120,
       "height": 60,
       "text": "**CLI**\nCommand-line interface",
@@ -53,8 +53,8 @@
     {
       "id": "api_server",
       "type": "text",
-      "x": 274,
-      "y": 193,
+      "x": 147,
+      "y": 39,
       "width": 140,
       "height": 60,
       "text": "**API Server**\nHTTP API server",
@@ -68,8 +68,8 @@
     {
       "id": "auth_service",
       "type": "text",
-      "x": 549,
-      "y": 300,
+      "x": 341,
+      "y": 154,
       "width": 140,
       "height": 60,
       "text": "**Auth Service**\nAuthentication",
@@ -83,8 +83,8 @@
     {
       "id": "scheduler",
       "type": "text",
-      "x": 127,
-      "y": 294,
+      "x": -47,
+      "y": 152,
       "width": 140,
       "height": 60,
       "text": "**Scheduler**\nResource allocation",
@@ -98,8 +98,8 @@
     {
       "id": "model_manager",
       "type": "text",
-      "x": 323,
-      "y": 399,
+      "x": 83,
+      "y": 269,
       "width": 140,
       "height": 60,
       "text": "**Model Manager**\nModel manifests",
@@ -113,8 +113,8 @@
     {
       "id": "template_system",
       "type": "text",
-      "x": 350,
-      "y": 301,
+      "x": 149,
+      "y": 152,
       "width": 140,
       "height": 60,
       "text": "**Templates**\nChat formatting",
@@ -128,8 +128,8 @@
     {
       "id": "llm_server",
       "type": "text",
-      "x": 126,
-      "y": 399,
+      "x": -87,
+      "y": 268,
       "width": 140,
       "height": 60,
       "text": "**LLM Server**\nProcess management",
@@ -143,8 +143,8 @@
     {
       "id": "runner",
       "type": "text",
-      "x": -73,
-      "y": 475,
+      "x": -291,
+      "y": 356,
       "width": 140,
       "height": 60,
       "text": "**Runner**\nModel execution",
@@ -158,8 +158,8 @@
     {
       "id": "model_layer",
       "type": "text",
-      "x": 86,
-      "y": 576,
+      "x": -132,
+      "y": 472,
       "width": 120,
       "height": 60,
       "text": "**Model Layer**\nArchitecture",
@@ -173,9 +173,9 @@
     {
       "id": "multimodal",
       "type": "text",
-      "x": 153,
-      "y": 688,
-      "width": 120,
+      "x": -46,
+      "y": 577,
+      "width": 144,
       "height": 60,
       "text": "**Multimodal**\nVision models",
       "pv": {
@@ -188,8 +188,8 @@
     {
       "id": "ml_backend",
       "type": "text",
-      "x": -74,
-      "y": 576,
+      "x": -281,
+      "y": 478,
       "width": 120,
       "height": 60,
       "text": "**ML Backend**\nAbstraction layer",
@@ -203,8 +203,8 @@
     {
       "id": "ggml",
       "type": "text",
-      "x": 7,
-      "y": 754,
+      "x": -217,
+      "y": 615,
       "width": 120,
       "height": 60,
       "text": "**GGML**\nLibrary integration",
@@ -218,8 +218,8 @@
     {
       "id": "device_manager",
       "type": "text",
-      "x": -177,
-      "y": 752,
+      "x": -374,
+      "y": 618,
       "width": 120,
       "height": 60,
       "text": "**Device Manager**\nGPU/CPU detection",
@@ -233,9 +233,9 @@
     {
       "id": "converter",
       "type": "text",
-      "x": 214,
-      "y": 494,
-      "width": 120,
+      "x": -2,
+      "y": 379,
+      "width": 132,
       "height": 60,
       "text": "**Converter**\nFormat conversion",
       "pv": {
@@ -248,9 +248,9 @@
     {
       "id": "registry",
       "type": "text",
-      "x": 376,
-      "y": 495,
-      "width": 120,
+      "x": 173,
+      "y": 379,
+      "width": 125,
       "height": 60,
       "text": "**Registry**\nModel registry",
       "pv": {
@@ -263,9 +263,9 @@
     {
       "id": "huggingface",
       "type": "text",
-      "x": 336,
-      "y": 687,
-      "width": 120,
+      "x": 161,
+      "y": 574,
+      "width": 150,
       "height": 60,
       "text": "**HuggingFace**\nModel repository",
       "pv": {
@@ -278,8 +278,8 @@
     {
       "id": "blob_storage",
       "type": "text",
-      "x": 553,
-      "y": 496,
+      "x": 336,
+      "y": 378,
       "width": 120,
       "height": 60,
       "text": "**Blob Storage**\nLocal cache",
@@ -293,8 +293,8 @@
     {
       "id": "kv_cache",
       "type": "text",
-      "x": -236,
-      "y": 577,
+      "x": -437,
+      "y": 480,
       "width": 120,
       "height": 60,
       "text": "**KV Cache**\nInference cache",
@@ -436,29 +436,6 @@
       }
     },
     {
-      "id": "e12",
-      "fromNode": "llm_server",
-      "fromSide": "bottom",
-      "toNode": "runner",
-      "toSide": "top",
-      "pv": {
-        "edgeType": "serve",
-        "style": "solid"
-      }
-    },
-    {
-      "id": "e13",
-      "fromNode": "runner",
-      "fromSide": "left",
-      "toNode": "kv_cache",
-      "toSide": "right",
-      "label": "cache",
-      "pv": {
-        "edgeType": "cache",
-        "style": "solid"
-      }
-    },
-    {
       "id": "e14",
       "fromNode": "runner",
       "fromSide": "right",
@@ -481,60 +458,73 @@
       }
     },
     {
-      "id": "e16",
-      "fromNode": "model_layer",
-      "fromSide": "right",
-      "toNode": "multimodal",
-      "toSide": "left",
-      "pv": {
-        "edgeType": "serve",
-        "style": "solid"
-      }
-    },
-    {
-      "id": "e17",
+      "id": "edge-ml_backend-device_manager-1767810677613",
       "fromNode": "ml_backend",
-      "fromSide": "right",
-      "toNode": "ggml",
-      "toSide": "left",
-      "pv": {
-        "edgeType": "serve",
-        "style": "solid"
-      }
-    },
-    {
-      "id": "e18",
-      "fromNode": "ml_backend",
-      "fromSide": "left",
       "toNode": "device_manager",
-      "toSide": "right",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
-        "edgeType": "serve",
-        "style": "solid"
+        "edgeType": "serve"
       }
     },
     {
-      "id": "e19",
+      "id": "edge-ml_backend-ggml-1767810677613",
+      "fromNode": "ml_backend",
+      "toNode": "ggml",
+      "fromSide": "bottom",
+      "toSide": "top",
+      "pv": {
+        "edgeType": "serve"
+      }
+    },
+    {
+      "id": "edge-runner-kv_cache-1767810677613",
+      "fromNode": "runner",
+      "toNode": "kv_cache",
+      "fromSide": "left",
+      "toSide": "top",
+      "pv": {
+        "edgeType": "cache"
+      }
+    },
+    {
+      "id": "edge-llm_server-runner-1767810677613",
+      "fromNode": "llm_server",
+      "toNode": "runner",
+      "fromSide": "left",
+      "toSide": "top",
+      "pv": {
+        "edgeType": "serve"
+      }
+    },
+    {
+      "id": "edge-converter-huggingface-1767810677613",
       "fromNode": "converter",
-      "fromSide": "right",
       "toNode": "huggingface",
+      "fromSide": "bottom",
       "toSide": "left",
-      "label": "download",
       "pv": {
-        "edgeType": "download",
-        "style": "dashed"
+        "edgeType": "download"
       }
     },
     {
-      "id": "e20",
+      "id": "edge-registry-huggingface-1767810677613",
       "fromNode": "registry",
-      "fromSide": "right",
       "toNode": "huggingface",
-      "toSide": "right",
-      "label": "sync",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
-        "edgeType": "sync",
-        "style": "dotted"
+        "edgeType": "sync"
+      }
+    },
+    {
+      "id": "edge-model_layer-multimodal-1767812785009",
+      "fromNode": "model_layer",
+      "toNode": "multimodal",
+      "fromSide": "right",
+      "toSide": "top",
+      "pv": {
+        "edgeType": "serve"
       }
     }
   ]
